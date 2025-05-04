@@ -38,26 +38,48 @@ No missing values were found in the dataset.
 
 ## 🧪 Methodology
 
-* Preprocessed data using Pandas and Scikit-learn
-* Scaled features using `StandardScaler`
-* Used an ANN model built with Keras (TensorFlow backend):
+To build this project, I followed a simple but structured pipeline combining data preprocessing, model building, and evaluation.
 
-  * Input Layer → Dense → Dropout → Dense → Output (Softmax)
-  * Activation functions: ReLU for hidden layers, Softmax for output
-  * Added dropout layers to reduce overfitting
-* Loss function: `categorical_crossentropy`
-* Optimizer: Adam
-* Evaluation metrics: Accuracy, Loss
+### 🔄 Data Preparation
 
-### Final Model Architecture
+* Loaded and explored the dataset using **Pandas**
+* Encoded the multi-class target variable
+* Scaled numerical features using **StandardScaler** from Scikit-learn
 
+### 🧠 Neural Network Architecture
+
+I used **Keras (TensorFlow backend)** to build a simple but effective ANN:
+
+```plaintext
+Input Layer
+↓
+Dense Layer (64 units, ReLU)
+↓
+Dropout Layer (rate = 0.3)
+↓
+Dense Layer (32 units, ReLU)
+↓
+Dropout Layer (rate = 0.3)
+↓
+Output Layer (Softmax)
 ```
-Dense (64 neurons, relu)
-Dropout (rate=0.3)
-Dense (32 neurons, relu)
-Dropout (rate=0.3)
-Output Dense Layer (softmax)
-```
+
+* **Activation Functions**: ReLU (hidden), Softmax (output)
+* **Loss Function**: `categorical_crossentropy`
+* **Evaluation Metrics**: Accuracy and Loss
+
+---
+
+## 📊 Results
+
+After training the model on a portion of the dataset and testing on unseen data:
+
+* **Test Accuracy**: `71.81%`
+* **Test Loss**: `0.5862`
+
+This shows that even a relatively simple ANN can extract useful patterns from structured clinical data.
+
+---
 
 ## ✅ Results
 
@@ -75,9 +97,22 @@ I tried to understand the weights and activations of the model by:
 
 This gave me better intuition about how features are treated inside the network.
 
-## 📁 Files Included
+## 📌 Reflections
 
-* `epilepsy_ann_model.ipynb`: Full Google Colab notebook
-* `epilepsy_dataset.csv`: Kaggle dataset
-* `/images/neural_network_diagram.png`: Visual for ANN structure
-* `README.md`: This file
+* Learned how to apply an ANN to a real-world medical dataset
+* Gained hands-on experience with preprocessing, modeling, and evaluating a classification task
+* Would like to explore more advanced models in the future (e.g., deeper networks, hyperparameter tuning, etc.)
+
+---
+
+## 📁 Files
+
+* `Epilepsy_Classification_using_ANN.ipynb`: Main Colab notebook
+* `Epilepsy_dataset.csv`: Kaggle dataset
+* `README.md`: Project overview and details
+
+---
+
+## Thanks for visiting! 😊 
+If you found this project interesting, feel free to start the repo or connect with me on [LinkedIn](https://www.linkedin.com/in/aya-hafsi/)
+
