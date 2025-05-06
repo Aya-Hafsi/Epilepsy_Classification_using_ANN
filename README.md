@@ -114,5 +114,5 @@ This gave me better intuition about how features are treated inside the network.
 ---
 
 ## Thanks for visiting! 😊 
-If you found this project interesting, feel free to start the repo or connect with me on [LinkedIn](https://www.linkedin.com/in/aya-hafsi/)
+If you found this project interesting, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/aya-hafsi/)
 
